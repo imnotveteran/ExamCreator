@@ -1,0 +1,22 @@
+<Window x:Class="ExamCreator.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="PDF Soru Oluşturma" Height="450" Width="800">
+    <Grid>
+        <!-- İki sütun oluşturma -->
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="2*" />
+        </Grid.ColumnDefinitions>
+
+        <!-- Sol Sütun: PDF Yükleme -->
+        <StackPanel Grid.Column="0" Margin="10">
+            <Button Name="LoadPdfButton" Content="PDF Yükle" Click="LoadPdf_Click" Height="40" />
+        </StackPanel>
+
+        <!-- Sağ Sütun: PDF Görüntüleme Alanı -->
+        <StackPanel Grid.Column="1" Margin="10">
+            <Image Name="PdfImage" Stretch="Uniform" />
+        </StackPanel>
+    </Grid>
+</Window>
